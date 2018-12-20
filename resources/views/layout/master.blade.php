@@ -27,18 +27,18 @@
         </div>
         @if(Auth::check())
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/news">News</a></li>
+            <li><a href="{{ route ('homepage.home') }}">Home</a></li>
+            <li><a href="{{ route ('news') }}">News</a></li>
             <li><a href="{{ route ('contact.form') }}">Contact</a></li>
-            <li><a href="/admin">Admin</a></li>
-            <li><a href="/logout">Logout</a></li>
+            {{--<li><a href="{{ route ('admin') }}">Admin</a></li>--}}
+            {{--<li><a href="{{ route ('logout') }}">Logout</a></li>--}}
         </ul>
         @else
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/news">News</a></li>
+            <li><a href="{{ route ('homepage.home') }}">Home</a></li>
+            <li><a href="{{ route ('news') }}">News</a></li>
             <li><a href="{{ route ('contact.form') }}">Contact</a></li>
-            <li><a href="/login">Login</a></li>
+            {{--<li><a href="{{ route ('login') }}">Login</a></li>--}}
         </ul>
         @endif
     </nav>
