@@ -44,3 +44,15 @@ Route::get('/gallery/add-photo', 'PhotoGalleryController@showPhotoForm' )
 Route::post('/gallery/add-photo', 'PhotoGalleryController@savePhotoForm' )
     ->name('gallery.upload-photo');
 
+Route::get('/gallery/photo/{id}', 'PhotoGalleryController@single' )
+    ->name('gallery.single');
+
+Route::get('/gallery/delete/{id}', 'PhotoGalleryController@delete' )
+    ->name('gallery.delete');
+
+Route::get('/gallery/edit/{id}', 'PhotoGalleryController@showPhotoForm2' )
+    ->name('gallery.edit-photo');
+
+Route::post('/gallery/edit/{id}', 'PhotoGalleryController@updatePhotoForm' )
+    ->name('gallery.update-photo');
+

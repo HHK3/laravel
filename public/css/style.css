@@ -115,10 +115,11 @@ nav ul li a:hover{
 }
 
 /* Photo Gallery */
-.test {
+.gallery {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     max-width: 80%;
+    padding-top: 20px;
     background: gray;
     margin-left: auto;
     margin-right: auto;
@@ -133,6 +134,38 @@ nav ul li a:hover{
 
 .imageGallery:hover {
     opacity: .5;
+    transition: .5s;
+}
+
+.text-danger {
+    color: red;
+}
+
+
+/* Photo Single */
+#singleLinks {
+    max-width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    display: grid;
+    background: gray;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.image {
+    width: 100%;
+    max-width: 750px;
+    height: auto;
+}
+
+#prevNext {
+    max-width: 300px;
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .news {
@@ -734,7 +767,6 @@ footer h3 {
 @media (max-width: 767px) {
     .artists {
         grid-template-columns: 1fr;
-
     }
 }
 
@@ -827,9 +859,20 @@ div.masonry { /* Masonry container */
         width: 150px;
         height: 150px;
     }
+    .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 359px) {
+
     .artistInfo img {
         width: 120px;
         height: 120px;
